@@ -1,0 +1,33 @@
+Repository: Counter
+Generated: 2026-03-03
+
+Source: index.html
+
+<!DOCTYPE html>
+<head>
+    <link rel='stylesheet' type='text/css' href='style.css' />
+</head>
+<body>
+    <div class="main">
+        <div id="inner">
+            <h2>Counter</h2>
+            <h1><span id="number">0</span></h1>
+            <button id="subtract" name="subtract">Subtract</button>
+            <button id="add" name="add">Add</button>
+        </div>
+    </div>
+</body>
+<script>
+    (function(){
+    const addbutton = document.getElementById('add');
+    const subtractbutton = document.getElementById('subtract');
+    let textNumber = document.getElementById('number').textContent;
+    textNumber = Number(textNumber);
+    addbutton.addEventListener("click", function () {
+        document.getElementById('number').textContent = textNumber ++;
+    });
+    subtractbutton.addEventListener("click", function () {
+        document.getElementById('number').textContent = textNumber --;
+    });
+})();
+</script>
